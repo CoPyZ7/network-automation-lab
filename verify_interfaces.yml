@@ -1,0 +1,9 @@
+---
+- name: Verify Interface Status CISCO
+  hosts: all
+  gather_facts: no
+  tasks:
+    - name: Show interfaces
+      ios_command:
+        commands:
+          - show ip interface brief
