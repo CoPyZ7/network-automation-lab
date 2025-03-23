@@ -6,7 +6,7 @@
   
     - name: Show interfaces
       ios_command:
-      lines:
+        lines:
           - show ip interface brief
         register: interface_output
 
