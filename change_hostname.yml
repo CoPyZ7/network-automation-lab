@@ -3,6 +3,7 @@
   hosts: R1
   gather_facts: no
   tasks:
+  
     - name: Change hostname to testing
       cisco.ios.ios_config:
         lines:
@@ -10,6 +11,10 @@
       register: result
       become: yes
       become_method: enable
+
+    - name: Save Configuration
+      cisco.ios.ios_config:
+        save_when: always
 
     - name: Show output of the configuration
       debug:
