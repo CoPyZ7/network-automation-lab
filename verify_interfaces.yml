@@ -5,7 +5,7 @@
   tasks:
   
     - name: Show interfaces
-      ios_command:
+      ios_config:
         lines:
           - show ip interface brief
         register: interface_output
