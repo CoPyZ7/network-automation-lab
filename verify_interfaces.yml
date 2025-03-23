@@ -11,4 +11,5 @@
         register: interface_output
 
     - name: Print Contents
+      debug:
         var: interface_output
