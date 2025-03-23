@@ -5,9 +5,10 @@
   tasks:
   
     - name: Change hostname to testing
-      cisco.ios.ios_config:
+      ios_config:
         lines:
           - "hostname testing"
+        save_when: modified
       register: result
       become: yes
       become_method: enable
