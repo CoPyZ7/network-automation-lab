@@ -7,7 +7,9 @@
       cisco.ios.ios_config:
         authorize: yes
         config:
+          - conf t
           - hostname testing
+          - exit
       register: result
 
     - name: Show output of the configuration
