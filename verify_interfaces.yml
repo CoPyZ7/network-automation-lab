@@ -8,8 +8,8 @@
       ios_config:
         lines:
           - show ip interface brief
-        register: interface_output
+        register: result 
 
     - name: Print Contents
       debug:
-        var: interface_output
+        var: result 
