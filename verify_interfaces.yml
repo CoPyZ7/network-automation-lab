@@ -1,9 +1,16 @@
 ---
 - name: Verify Interface Status CISCO
-  hosts: all
+  hosts: R1
   gather_facts: no
   tasks:
+  
     - name: Show interfaces
       ios_command:
         commands:
           - show ip interface brief
+        register: interface_output
+
+    - name 
+    - name: Print Contents
+      debug:
+        msg: "{{ interface_output.stdout_lines }}"
