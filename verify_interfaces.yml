@@ -10,7 +10,7 @@
           - show ip interface brief
         register: interface_output
 
-    - name 
     - name: Print Contents
       debug:
         msg: "{{ interface_output.stdout_lines }}"
+        var: interface_output
