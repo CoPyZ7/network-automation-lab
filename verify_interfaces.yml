@@ -8,7 +8,7 @@
       ios_config:
         lines:
           - show ip interface brief
-        register: result 
+      register: result 
 
     - name: Print Contents
       debug:
